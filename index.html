@@ -8,18 +8,21 @@
 </head>
 <body>
     <h1>Expense Tracker</h1>
+  <form id="transactionForm">
+         <h2>Add Transaction</h2>
+         <input type="date" id="date" required>
+         <select id="type" required>
+             <option value="">Select Type</option>
+             <option value="income">Income</option>
+             <option value="expense">Expense</option>
+         </select>
+         <input type="text" id="category" placeholder="Category (e.g., Salary, Food)" required>
+         <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+         <textarea id="description" placeholder="Description (optional)"></textarea>
+         <button type="submit">Add Transaction</button>
+     </form>
+     
 
-    <form id="transactionForm">
-        <input type="date" id="date" required>
-        <select id="type">
-            <option value="Income">Income</option>
-            <option value="Expense">Expense</option>
-        </select>
-        <input type="text" id="category" placeholder="Category" required>
-        <input type="number" id="amount" placeholder="Amount" required>
-        <textarea id="description" placeholder="Description (optional)"></textarea>
-        <button type="submit">Add Transaction</button>
-    </form>
     
     <!-- Summary -->
     <div id="summary">
