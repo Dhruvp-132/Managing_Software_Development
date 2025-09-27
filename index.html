@@ -1,32 +1,52 @@
-            <textarea id="description" placeholder="Description (optional)"></textarea>
-            <button type="submit">Add Transaction</button>
-        </form>
-        <!-- Summary -->
-        <div id="summary">
-            <h2>Summary</h2>
-            <p>Total Income: $<span id="totalIncome">0.00</span></p>
-            <p>Total Expenses: $<span id="totalExpenses">0.00</span></p>
-            <p>Net Balance: $<span id="netBalance">0.00</span></p>
-        </div>
-        <!-- Transactions List -->
-        <div id="transactionsList">
-            <h2>Transactions</h2>
-            <table id="transactionsTable">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Type</th>
-                        <th>Category</th>
-                        <th>Amount</th>
-                        <th>Description</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="transactionsBody">
-                    <!-- Transactions loaded via JS -->
-                </tbody>
-            </table>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Expense Tracker</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+
+    <form id="transactionForm">
+        <input type="date" id="date" required>
+        <select id="type">
+            <option value="Income">Income</option>
+            <option value="Expense">Expense</option>
+        </select>
+        <input type="text" id="category" placeholder="Category" required>
+        <input type="number" id="amount" placeholder="Amount" required>
+        <textarea id="description" placeholder="Description (optional)"></textarea>
+        <button type="submit">Add Transaction</button>
+    </form>
+    
+    <!-- Summary -->
+    <div id="summary">
+        <h2>Summary</h2>
+        <p>Total Income: $<span id="totalIncome">0.00</span></p>
+        <p>Total Expenses: $<span id="totalExpenses">0.00</span></p>
+        <p>Net Balance: $<span id="netBalance">0.00</span></p>
+    </div>
+
+    <!-- Transactions List -->
+    <div id="transactionsList">
+        <h2>Transactions</h2>
+        <table id="transactionsTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="transactionsBody">
+                <!-- Transactions loaded via JS -->
+            </tbody>
+        </table>
     </div>
     <script src="script.js"></script>
 </body>
